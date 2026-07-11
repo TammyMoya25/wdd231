@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W01 Assignment: Course Home Page</title>
+    <meta name="description"
+        content="WDD 231 Course Home Page showcasing responsive layout, CARP principles, and dynamic course filtering.">
+    <meta name="author" content="Tamara Moya">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.svg" alt="Books logo" class="logo" width="50" height="50">
+            <span>Tamara Moya</span>
+        </div>
+        <button id="menu-toggle" aria-label="Toggle navigation Menu">&#9776;</button>
+        <nav id="nav-menu">
+            <a href="#" class="active">Home</a>
+            <a href="#">Chamber</a>
+            <a href="#">Final</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <div class="main-layout">
+            <section class="card about-me">
+                <h2>About Me</h2>
+                <p>
+                    Hello! I am a Software Development student at BYU-Idaho working towards my
+                    Web and Computer Programming certificate. I enjoy building clean, accessible,
+                    and highly responsive web applications. Through my coursework in CSE and WDD,
+                    I have developed a strong foundation in semantic HTML, organized CSS architectures,
+                    and dynamic frontend execution using JavaScript. When I am not coding or optimizing
+                    layouts for mobile devices, I look for new ways to refine my skills and build efficient software
+                    solutions.
+                </p>
+            </section>
+
+            <section class="card student-photo">
+                <h2>Student Photo</h2>
+                <div class="image-placeholder">
+                    <img src="images/me.jpg" alt="Student Profile Picture" width="200" height="200">
+                </div>
+            </section>
+
+            <section class="card web-courses">
+                <h2>Web Certificate Courses</h2>
+
+                <div class="filters">
+                    <button id="filter-all" class="btn active">All</button>
+                    <button id="filter-cse" class="btn">CSE</button>
+                    <button id="filter-wdd" class="btn">WDD</button>
+                </div>
+
+                <div id="course-container" class="course-display">
+                </div>
+
+                <p class="credit-highlight">The total credits for courses listed above is: <span
+                        id="total-credits">0</span>
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repository">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn Profile">LinkedIn</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X Account">X</a>
+        </div>
+        <p>&copy;<span id="currentyear"></span> | Tamara Moya | San Jose, Costa Rica</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
