@@ -1,8 +1,14 @@
+/* ==========================================================================
+   DESKTOP MEDIA QUERY (Responsive Grid & Desktop Flow Layout)
+   ========================================================================== */
 @media (min-width: 768px) {
+
+    /* Hide Mobile Toggle Elements */
     #menu-toggle {
         display: none;
     }
 
+    /* Transform Navigation Layout to Horizontal Flex */
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -21,7 +27,7 @@
         padding: 0.5rem 1.5rem;
     }
 
-    /* Layout structure matches Desktop Wireframe */
+    /* Multi-column Grid structure matching the wireframe architecture precisely */
     .main-layout {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -42,7 +48,7 @@
         grid-column: 1 / 3;
     }
 
-    /* Target rows layout for dynamic items on large screens */
+    /* Render Course Cards horizontally in rows rather than single columns */
     .course-display {
         flex-direction: row;
         flex-wrap: wrap;
