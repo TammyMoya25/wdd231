@@ -1,62 +1,38 @@
 /* ==========================================================================
-   DESKTOP MEDIA QUERY (Responsive Grid & Desktop Flow Layout)
+   DESKTOP RESPONSIVE CONFIGURATIONS (Index Page)
    ========================================================================== */
 @media (min-width: 768px) {
-
-    /* Hide Mobile Toggle Elements */
     #menu-toggle {
         display: none;
     }
 
-    /* Transform Navigation Layout to Horizontal Flex */
-    header {
-        flex-direction: row;
-        justify-content: space-between;
+    .header-wrapper {
+        padding: 1rem 2rem;
     }
 
+    /* Standard horizontal navbar flow */
     nav {
-        display: flex !important;
-        flex-direction: row;
+        display: block !important;
         position: static;
         width: auto;
         background: none;
     }
 
     nav a {
+        display: inline-block;
         border-top: none;
-        padding: 0.5rem 1.5rem;
+        padding: 0.6rem 1.2rem;
+        color: var(--white) !important;
+        text-decoration: none;
     }
 
-    /* Multi-column Grid structure matching the wireframe architecture precisely */
     .main-layout {
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 1.5rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .about-me {
-        grid-column: 1 / 2;
-    }
-
-    .student-photo {
-        grid-column: 2 / 3;
     }
 
     .web-courses {
-        grid-column: 1 / 3;
-    }
-
-    /* Render Course Cards horizontally in rows rather than single columns */
-    .course-display {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .course-item {
-        flex: 1 1 calc(33.333% - 1rem);
-        max-width: calc(33.333% - 1rem);
+        grid-column: span 2;
     }
 }

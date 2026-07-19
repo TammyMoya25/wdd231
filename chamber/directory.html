@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Directory | Apex Regional Chamber of Commerce</title>
+    <meta name="description"
+        content="Explore the certified business directory of the Apex Regional Chamber of Commerce. Connecting enterprises and driving community growth.">
+    <meta name="author" content="Tamara Moya">
+
+    <!-- FaceBook Open Graph Metadata (Absolute URLs) -->
+    <meta property="og:title" content="Apex Regional Chamber of Commerce Business Directory">
+    <meta property="og:description"
+        content="Connecting businesses, driving economic growth, and building a prosperous community. Join our certified member network.">
+    <meta property="og:image" content="https://tammymoya25.github.io/wdd231/chamber/images/chamber-og-preview.jpg">
+    <meta property="og:url" content="https://tammymoya25.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Local independent styles for Chamber site -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="../images/favicon.ico">
+
+    <!-- Script location updated to scripts/ folder -->
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="logo-container">
+                <img src="images/logo.svg" alt="Chamber logo" class="logo" width="50" height="50">
+                <div class="branding">
+                    <span class="student-name">Tamara Moya</span>
+                    <h1>Apex Regional Chamber of Commerce</h1>
+                </div>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle navigation Menu">&#9776;</button>
+            <nav id="nav-menu">
+                <a href="../index.html">Home</a>
+                <a href="directory.html" class="active">Directory</a>
+                <a href="#">Join</a>
+                <a href="#">Discover</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Business Directory</h1>
+
+        <div class="directory-controls">
+            <p>Filter business listings by card grid or list view layouts:</p>
+            <div class="toggle-buttons">
+                <button id="grid-btn" class="active" aria-label="Switch to Grid View">Grid View ☷</button>
+                <button id="list-btn" aria-label="Switch to List View">List View ☰</button>
+            </div>
+        </div>
+
+        <!-- Target element for dynamically injected JSON cards -->
+        <article id="directory-container" class="grid-view">
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repository">GitHub</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X Account">X</a>
+            </div>
+            <p>&copy;<span id="currentyear"></span> | Tamara Moya | San Jose, Costa Rica</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
