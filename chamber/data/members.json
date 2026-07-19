@@ -4,7 +4,7 @@
         "address": "120 Innovation Way, Suite 400",
         "phone": "(208) 555-0190",
         "website": "https://example.com/apextech",
-        "image": "member-apex.png",
+        "image": "../images/member-apex.png",
         "membershipLevel": 3,
         "tagline": "Empowering local workflows with robust architectures."
     },
@@ -13,7 +13,7 @@
         "address": "455 Main St, Business District",
         "phone": "(208) 555-0143",
         "website": "https://example.com/beacon",
-        "image": "member-beacon.png",
+        "image": "../images/member-beacon.png",
         "membershipLevel": 2,
         "tagline": "Guiding your brand matching modern visual principles."
     },
@@ -22,7 +22,7 @@
         "address": "88 Alpine Blvd",
         "phone": "(208) 555-0112",
         "website": "https://example.com/coppercreek",
-        "image": "member-copper.png",
+        "image": "../images/member-copper.png",
         "membershipLevel": 1,
         "tagline": "Fresh local ingredients for the community."
     },
@@ -31,7 +31,7 @@
         "address": "710 Pioneer Rd, Floor 2",
         "phone": "(208) 555-0167",
         "website": "https://example.com/summitfin",
-        "image": "member-summit.png",
+        "image": "../images/member-summit.png",
         "membershipLevel": 3,
         "tagline": "Securing investments and financial stability."
     },
@@ -40,7 +40,7 @@
         "address": "1990 Freight Terminal Way",
         "phone": "(208) 555-0188",
         "website": "https://example.com/vanguard",
-        "image": "member-vanguard.png",
+        "image": "../images/member-vanguard.png",
         "membershipLevel": 2,
         "tagline": "Streamlining cross-regional transport efficiently."
     },
@@ -49,7 +49,7 @@
         "address": "340 Medical Park Dr",
         "phone": "(208) 555-0121",
         "website": "https://example.com/clearview",
-        "image": "member-clearview.png",
+        "image": "../images/member-clearview.png",
         "membershipLevel": 1,
         "tagline": "Bringing clarity and focus to your vision."
     },
@@ -58,7 +58,7 @@
         "address": "1200 Skyview Terrace",
         "phone": "(208) 555-0155",
         "website": "https://example.com/bluehorizon",
-        "image": "member-blue.png",
+        "image": "../images/member-blue.png",
         "membershipLevel": 3,
         "tagline": "Building high-performance spaces for tomorrow."
     }
