@@ -36,17 +36,22 @@ function displayMembers(members, layoutStyle) {
 
         // Inside chamber/scripts/directory.js -> displayMembers function
         if (layoutStyle === "grid") {
-            // Corrected path to target the internal chamber/images/ folder
+            // Estructura limpia basada en el boceto de tarjeta de presentación
             card.innerHTML = `
-                <div class="img-frame">
-                    <img src="images/${member.image}" alt="Emblem for ${member.name}" loading="lazy" width="150" height="75">
+                <div class="member-header">
+                    <h3>${member.name}</h3>
+                    <span class="badge status-${rank.toLowerCase()}">${rank} Partner</span>
                 </div>
-                <h3>${member.name}</h3>
-                <p class="tagline">"${member.tagline}"</p>
-                <p class="info"><strong>📍 Address:</strong> ${member.address}</p>
-                <p class="info"><strong>📞 Phone:</strong> ${member.phone}</p>
-                <span class="badge status-${rank.toLowerCase()}">${rank} Partner</span>
-                <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
+                <div class="member-body">
+                    <div class="img-frame">
+                        <img src="images/${member.image}" alt="Emblem for ${member.name}" loading="lazy" width="150" height="75">
+                    </div>
+                    <div class="member-info">
+                        <p class="info"><strong>ADDRESS:</strong> ${member.address}</p>
+                        <p class="info"><strong>PHONE:</strong> ${member.phone}</p>
+                        <p class="info"><strong>URL:</strong> ${member.website}</p>
+                    </div>
+                </div>
             `;
         } else {
             // Text-only simplified rows for responsive list view layout

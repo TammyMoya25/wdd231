@@ -73,7 +73,6 @@ footer {
 .header-wrapper {
     display: flex;
     flex-wrap: wrap;
-    /* Permite que el menú baje al siguiente renglón en móvil */
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
@@ -127,21 +126,18 @@ footer {
 }
 
 /* ==========================================================================
-   4. NAVIGATION SYSTEM (Despliegue vertical limpio debajo del logo)
+   4. NAVIGATION SYSTEM
    ========================================================================== */
 nav {
     display: none;
     width: 100%;
-    /* Obliga al nav a ocupar todo el ancho inferior */
     flex-direction: column;
     background-color: var(--primary-color);
     margin-top: 1rem;
-    /* Separa el menú del logo cuando está abierto */
 }
 
 nav.open {
     display: flex;
-    /* Se activa mediante el script de JS */
 }
 
 nav a {
@@ -193,7 +189,7 @@ p {
     color: var(--white);
 }
 
-/* --- GRID TEMPLATE DISPLAY --- */
+/* --- GRID TEMPLATE DISPLAY (Business Card Layout) --- */
 .grid-view {
     display: flex;
     flex-direction: column;
@@ -205,42 +201,87 @@ p {
     background: var(--white);
     border: 1px solid var(--border-gray);
     border-radius: 6px;
-    padding: 1.5rem 1rem;
-    text-align: center;
+    padding: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
-}
-
-.img-frame {
-    height: 90px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0.75rem;
+    flex-direction: column;
 }
 
-.grid-view .member-card img {
-    max-width: 130px;
-    height: auto;
+/* Header section inside the card */
+.grid-view .member-header {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-gray);
 }
 
-.tagline {
+.grid-view .member-header h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.grid-view .member-header .tagline {
+    margin: 0.25rem 0 0 0;
+    padding: 0;
     font-style: italic;
     color: var(--accent-color);
     font-size: 0.9rem;
 }
 
-.info {
-    font-size: 0.9rem;
-    margin: 0.3rem 0;
+/* Card body container splitting into 2 proportional columns */
+.grid-view .member-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: 1.2rem;
+    gap: 1.5rem;
 }
 
-.badge {
+/* Image column styles */
+.grid-view .img-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+.grid-view .member-card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Text information column styles */
+.grid-view .member-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+}
+
+.grid-view .info {
+    font-size: 0.85rem;
+    margin: 0.25rem 0;
+    padding: 0;
+    width: 100%;
+}
+
+.grid-view .info a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.grid-view .badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
     font-size: 0.8rem;
     font-weight: bold;
-    border-radius: 20px;
-    margin: 0.5rem 0;
+    border-radius: 4px;
+    margin-top: 0.5rem;
 }
 
 .status-gold {
@@ -258,13 +299,6 @@ p {
     color: var(--text-color);
 }
 
-.grid-view .member-card a {
-    display: block;
-    margin-top: 1rem;
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
 /* --- LIST TEMPLATE DISPLAY --- */
 .list-view {
     display: flex;
@@ -278,6 +312,14 @@ p {
     border: 1px solid var(--border-gray);
     padding: 1rem;
     border-radius: 4px;
+}
+
+.list-view .member-body {
+    display: block;
+}
+
+.list-view .img-frame {
+    display: none;
 }
 
 .list-item-row {
