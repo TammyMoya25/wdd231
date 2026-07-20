@@ -40,6 +40,7 @@ function displayMembers(members, layoutStyle) {
             card.innerHTML = `
                 <div class="member-header">
                     <h3>${member.name}</h3>
+                    <p class="tagline">"${member.tagline || 'Guiding your brand matching modern visual principles.'}"</p>
                     <span class="badge status-${rank.toLowerCase()}">${rank} Partner</span>
                 </div>
                 <div class="member-body">
@@ -47,9 +48,9 @@ function displayMembers(members, layoutStyle) {
                         <img src="images/${member.image}" alt="Emblem for ${member.name}" loading="lazy" width="150" height="75">
                     </div>
                     <div class="member-info">
-                        <p class="info"><strong>ADDRESS:</strong> ${member.address}</p>
-                        <p class="info"><strong>PHONE:</strong> ${member.phone}</p>
-                        <p class="info"><strong>URL:</strong> ${member.website}</p>
+                        <p class="info">${member.address}</p>
+                        <p class="info">${member.phone}</p>
+                        <p class="info"><a href="${member.website}" target="_blank" rel="noopener">${member.website}</a></p>
                     </div>
                 </div>
             `;
