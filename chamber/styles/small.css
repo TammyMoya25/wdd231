@@ -2,27 +2,27 @@
    1. COLOR VARIABLES & DESIGN TOKENS
    ========================================================================== */
 :root {
-    --primary-color: rgb(26, 26, 26);
-    --secondary-color: rgb(224, 224, 224);
-    --accent-color: rgb(51, 51, 51);
-    --text-color: rgb(34, 34, 34);
+    --primary-color: #1a1a1a;
+    --secondary-color: #e0e0e0;
+    --accent-color: #333333;
+    --text-color: #222222;
 
-    --white: rgb(255, 255, 255);
-    --black: rgb(0, 0, 0);
-    --transparent: rgba(0, 0, 0, 0);
-    --border-gray: rgb(221, 221, 221);
-    --dark-border: rgb(68, 68, 68);
-    --active-gray: rgb(85, 85, 85);
-    --background-light: rgb(250, 250, 250);
-    --card-item-bg: rgb(240, 240, 240);
-    --card-item-border: rgb(204, 204, 204);
+    --white: #ffffff;
+    --black: #000000;
+    --transparent: #00000000;
+    --border-gray: #dddddd;
+    --dark-border: #444444;
+    --active-gray: #555555;
+    --background-light: #fafafa;
+    --card-item-bg: #f0f0f0;
+    --card-item-border: #cccccc;
 
-    --gold-text: rgb(133, 100, 4);
-    --gold-bg: rgb(255, 243, 205);
-    --silver-text: rgb(51, 65, 85);
-    --silver-bg: rgb(241, 245, 249);
+    --gold-text: #856404;
+    --gold-bg: #fff3cd;
+    --silver-text: #334155;
+    --silver-bg: #f1f5f9;
 
-    --font-stack: 'Roboto', Arial, sans-serif;
+    --font-stack: Arial, sans-serif;
 }
 
 /* ==========================================================================
