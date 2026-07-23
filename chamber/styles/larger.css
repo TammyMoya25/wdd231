@@ -11,7 +11,7 @@
         display: block !important;
         position: static;
         width: auto;
-        background: transparent;
+        background: var(--transparent);
     }
 
     nav a {

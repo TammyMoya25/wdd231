@@ -1,4 +1,6 @@
-/* 1. COLOR VARIABLES & DESIGN TOKENS */
+/* ==========================================================================
+   1. COLOR VARIABLES & DESIGN TOKENS
+   ========================================================================== */
 :root {
     --primary-color: rgb(26, 26, 26);
     --secondary-color: rgb(224, 224, 224);
@@ -7,6 +9,7 @@
 
     --white: rgb(255, 255, 255);
     --black: rgb(0, 0, 0);
+    --transparent: rgba(0, 0, 0, 0);
     --border-gray: rgb(221, 221, 221);
     --dark-border: rgb(68, 68, 68);
     --active-gray: rgb(85, 85, 85);
@@ -22,7 +25,9 @@
     --font-stack: 'Roboto', Arial, sans-serif;
 }
 
-/* 2. STICKY FOOTER & LAYOUT BASE */
+/* ==========================================================================
+   2. STICKY FOOTER & LAYOUT BASE
+   ========================================================================== */
 html,
 body {
     height: 100%;
@@ -62,7 +67,9 @@ footer {
     padding: 1.5rem 1rem;
 }
 
-/* 3. HEADER & NAVIGATION */
+/* ==========================================================================
+   3. HEADER & NAVIGATION
+   ========================================================================== */
 .header-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -103,7 +110,7 @@ footer {
 }
 
 #menu-toggle {
-    background: transparent;
+    background: var(--transparent);
     border: 0;
     color: var(--white);
     font-size: 1.8rem;
@@ -142,7 +149,9 @@ nav a.active {
     font-weight: bold;
 }
 
-/* 4. HOME PAGE STYLES */
+/* ==========================================================================
+   4. HOME PAGE STYLES
+   ========================================================================== */
 .hero-container {
     position: relative;
     width: 100%;
@@ -172,13 +181,13 @@ nav a.active {
 .hero-overlay h2 {
     margin: 0 0 0.5rem;
     font-size: 1.5rem;
-    text-shadow: 1px 1px 4px rgb(0, 0, 0);
+    text-shadow: 1px 1px 4px var(--black);
 }
 
 .hero-overlay p {
     font-size: 0.95rem;
     margin-bottom: 1.2rem;
-    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+    text-shadow: 1px 1px 3px var(--black);
 }
 
 .cta-button {
@@ -207,7 +216,7 @@ nav a.active {
     border: 1px solid var(--border-gray);
     border-radius: 6px;
     padding: 1.2rem;
-    box-shadow: 0 2px 5px rgb(230, 230, 230);
+    box-shadow: 0 2px 5px var(--secondary-color);
 }
 
 .home-card h2 {
@@ -290,7 +299,9 @@ nav a.active {
     gap: 1.5rem;
 }
 
-/* 5. SHARED MEMBER CARDS */
+/* ==========================================================================
+   5. SHARED MEMBER CARDS
+   ========================================================================== */
 .member-card {
     background: var(--white);
     border: 1px solid var(--border-gray);
@@ -382,7 +393,9 @@ nav a.active {
     color: var(--text-color);
 }
 
-/* 6. DIRECTORY & FOOTER */
+/* ==========================================================================
+   6. DIRECTORY & FOOTER
+   ========================================================================== */
 .directory-controls {
     text-align: center;
     margin-bottom: 1.5rem;
