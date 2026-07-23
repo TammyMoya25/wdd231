@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Home Page | San Jose Costa Rica Chamber of Commerce</title>
+    <meta name="description"
+        content="Explore the certified business directory of the SJO CR Chamber of Commerce. This home page will introduce you to the rest of the website.">
+    <meta name="author" content="Tamara Moya">
+
+    <!-- FaceBook Open Graph Metadata -->
+    <meta property="og:title" content="Apex Regional Chamber of Commerce Business Directory">
+    <meta property="og:description"
+        content="Connecting businesses, driving economic growth, and building a prosperous community. Join our certified member network.">
+    <meta property="og:image" content="https://tammymoya25.github.io/wdd231/chamber/images/chamber-og-preview.jpg">
+    <meta property="og:url" content="https://tammymoya25.github.io/wdd231/chamber/index.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Local independent styles for Chamber site -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="../images/favicon.ico">
+
+    <!-- Script location updated to scripts/ folder -->
+    <script src="scripts/index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="logo-container">
+                <img src="images/logo.svg" alt="Chamber logo" class="logo" width="50" height="50">
+                <div class="branding">
+                    <span class="student-name">San Jose, Costa Rica | Chamber of Commerce</span>
+                </div>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle navigation Menu">&#9776;</button>
+            <nav id="nav-menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="#">Join</a>
+                <a href="#">Discover</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-container">
+            <img src="images/hero.webp" alt="San Jose Costa Rica Skyline Banner" class="hero-image" width="1200" height="400">
+            <div class="hero-overlay">
+                <h2>Empowering San Jose Businesses</h2>
+                <p>Join our thriving business ecosystem today and expand your reach across Costa Rica.</p>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+        
+        <!-- Dynamic Home Content Grid -->
+        <div class="home-grid">
+            <!-- Events Section -->
+            <section class="home-card events-section">
+                <h2>Current Events</h2>
+                <ul class="events-list">
+                    <li>
+                        <strong>SJO Tech Innovation Summit</strong>
+                        <span>Date: October 15, 2026 | Time: 9:00 AM</span>
+                        <p>Location: San Jose Convention Center</p>
+                    </li>
+                    <li>
+                        <strong>Local Business Networking Mixer</strong>
+                        <span>Date: November 02, 2026 | Time: 6:00 PM</span>
+                        <p>Location: Barrio Escalante Gastro Park</p>
+                    </li>
+                </ul>
+            </section>
+        
+            <!-- Weather Section -->
+            <section class="home-card weather-section">
+                <h2>San Jose Weather</h2>
+                <div class="current-weather">
+                    <div class="weather-main">
+                        <img id="weather-icon" src="images/placeholder-icon.svg" alt="Weather condition icon" width="50"
+                            height="50">
+                        <span id="current-temp">--°C</span>
+                    </div>
+                    <p id="weather-desc">Loading current conditions...</p>
+                </div>
+                <hr class="card-divider">
+                <h3>3-Day Forecast</h3>
+                <div id="forecast-container" class="forecast-list">
+                    <p>Loading weather forecast...</p>
+                </div>
+            </section>
+        
+            <!-- Member Spotlights Container -->
+            <section class="home-card spotlights-section">
+                <h2>Member Spotlights</h2>
+                <div id="spotlights-container" class="spotlights-grid">
+                    <p>Loading company spotlights...</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repository">GitHub</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X Account">X</a>
+            </div>
+            <p>&copy;<span id="currentyear"></span> | Tamara Moya | San Jose, Costa Rica</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

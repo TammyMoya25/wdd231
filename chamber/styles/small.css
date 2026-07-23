@@ -16,7 +16,7 @@
     --card-item-bg: rgb(240, 240, 240);
     --card-item-border: rgb(204, 204, 204);
 
-    /* Directory Accessibility Badges */
+    /* Directory & Badge Accessibility Colors */
     --gold-text: rgb(133, 100, 4);
     --gold-bg: rgb(255, 243, 205);
     --silver-text: rgb(51, 65, 85);
@@ -68,7 +68,7 @@ footer {
 }
 
 /* ==========================================================================
-   3. GLOBAL HEADER LAYOUT & MOBILE MENU FIX
+   3. GLOBAL HEADER LAYOUT
    ========================================================================== */
 .header-wrapper {
     display: flex;
@@ -161,121 +161,247 @@ nav a.active {
 }
 
 /* ==========================================================================
-   5. CHAMBER DIRECTORY TEMPLATE LAYOUTS
+   5. HOME PAGE STYLES (Hero, Weather & Events)
    ========================================================================== */
-h1,
-h2,
-p {
-    padding: 0 1rem;
-}
-
-.directory-controls {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.toggle-buttons button {
-    padding: 0.6rem 1.5rem;
-    border: 1px solid var(--card-item-border);
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    cursor: pointer;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-.toggle-buttons button.active {
+.hero-container {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
     background-color: var(--primary-color);
-    color: var(--white);
 }
 
-/* --- GRID TEMPLATE DISPLAY (Business Card Layout) --- */
-.grid-view {
+.hero-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    opacity: 0.65;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white);
+    width: 90%;
+}
+
+.hero-overlay h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-overlay p {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    padding: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--white);
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.home-grid {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
 }
 
-.grid-view .member-card {
+.home-card {
+    background: var(--white);
+    border: 1px solid var(--border-gray);
+    border-radius: 6px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.home-card h2 {
+    margin-top: 0;
+    padding: 0;
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.4rem;
+}
+
+/* Events List */
+.events-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.events-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.events-list li:last-child {
+    border-bottom: none;
+}
+
+.events-list strong {
+    display: block;
+    font-size: 1rem;
+}
+
+.events-list span {
+    font-size: 0.85rem;
+    color: var(--active-gray);
+}
+
+.events-list p {
+    margin: 0.25rem 0 0 0;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+/* Weather Component */
+.weather-main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#current-temp {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#weather-desc {
+    margin: 0.5rem 0;
+    padding: 0;
+    font-style: italic;
+}
+
+.card-divider {
+    border: none;
+    border-top: 1px solid var(--border-gray);
+    margin: 1rem 0;
+}
+
+.home-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+.forecast-list {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.forecast-item .day {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.spotlights-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ==========================================================================
+   6. SHARED MEMBER CARDS (Works for Directory AND Spotlights)
+   ========================================================================== */
+.member-card {
     background: var(--white);
     border: 1px solid var(--border-gray);
     border-radius: 6px;
     padding: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
-/* Header section inside the card */
-.grid-view .member-header {
+.member-header {
     padding: 1rem;
     text-align: center;
     border-bottom: 1px solid var(--border-gray);
+    background-color: var(--background-light);
 }
 
-.grid-view .member-header h3 {
+.member-header h3 {
     margin: 0;
     padding: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
-.grid-view .member-header .tagline {
+.member-header .tagline {
     margin: 0.25rem 0 0 0;
     padding: 0;
     font-style: italic;
     color: var(--accent-color);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
-/* Card body container splitting into 2 proportional columns */
-.grid-view .member-body {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+.member-body {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     padding: 1.2rem;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
-/* Image column styles */
-.grid-view .img-frame {
+.img-frame {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
     width: 100%;
+    max-width: 150px;
 }
 
-.grid-view .member-card img {
-    max-width: 100%;
-    height: auto;
+.member-card img {
+    width: 100%;
+    height: 90px;
     object-fit: contain;
 }
 
-/* Text information column styles */
-.grid-view .member-info {
+.member-info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-align: left;
     width: 100%;
-    overflow: hidden;
 }
 
-.grid-view .info {
+.info {
     font-size: 0.85rem;
     margin: 0.25rem 0;
     padding: 0;
     width: 100%;
+    word-break: break-word;
 }
 
-.grid-view .info a {
+.info a {
     color: var(--primary-color);
     font-weight: bold;
     text-decoration: underline;
 }
 
-.grid-view .badge {
+.badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
     font-size: 0.8rem;
@@ -299,7 +425,37 @@ p {
     color: var(--text-color);
 }
 
-/* --- LIST TEMPLATE DISPLAY --- */
+/* ==========================================================================
+   7. DIRECTORY SPECIFIC CONTROLS
+   ========================================================================== */
+.directory-controls {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.toggle-buttons button {
+    padding: 0.6rem 1.5rem;
+    border: 1px solid var(--card-item-border);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.toggle-buttons button.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.grid-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* List view template overrides */
 .list-view {
     display: flex;
     flex-direction: column;
@@ -338,7 +494,7 @@ p {
 }
 
 /* ==========================================================================
-   6. GLOBAL FOOTER LAYOUT
+   8. GLOBAL FOOTER LAYOUT
    ========================================================================== */
 .social-links {
     margin-bottom: 1rem;
