@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. COLOR VARIABLES & DESIGN TOKENS
-   ========================================================================== */
+/* 1. COLOR VARIABLES & DESIGN TOKENS */
 :root {
     --primary-color: rgb(26, 26, 26);
     --secondary-color: rgb(224, 224, 224);
@@ -16,7 +14,6 @@
     --card-item-bg: rgb(240, 240, 240);
     --card-item-border: rgb(204, 204, 204);
 
-    /* Directory & Badge Accessibility Colors */
     --gold-text: rgb(133, 100, 4);
     --gold-bg: rgb(255, 243, 205);
     --silver-text: rgb(51, 65, 85);
@@ -25,9 +22,7 @@
     --font-stack: 'Roboto', Arial, sans-serif;
 }
 
-/* ==========================================================================
-   2. STICKY FOOTER STRUCTURAL MATRIX
-   ========================================================================== */
+/* 2. STICKY FOOTER & LAYOUT BASE */
 html,
 body {
     height: 100%;
@@ -67,9 +62,7 @@ footer {
     padding: 1.5rem 1rem;
 }
 
-/* ==========================================================================
-   3. GLOBAL HEADER LAYOUT
-   ========================================================================== */
+/* 3. HEADER & NAVIGATION */
 .header-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -94,40 +87,30 @@ footer {
 .branding {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .branding .student-name {
     margin: 0;
-    padding: 0;
     font-size: 0.85rem;
-    font-weight: 400;
     color: var(--white);
     opacity: 0.9;
-    line-height: 1.2;
 }
 
 .branding h1 {
     margin: 0;
-    padding: 0;
     font-size: 1.1rem;
-    font-weight: 700;
     color: var(--white);
-    line-height: 1.3;
 }
 
 #menu-toggle {
-    background: none;
-    border: none;
+    background: transparent;
+    border: 0;
     color: var(--white);
     font-size: 1.8rem;
     cursor: pointer;
     padding: 0.5rem;
 }
 
-/* ==========================================================================
-   4. NAVIGATION SYSTEM
-   ========================================================================== */
 nav {
     display: none;
     width: 100%;
@@ -141,7 +124,7 @@ nav.open {
 }
 
 nav a {
-    color: var(--white) !important;
+    color: var(--white);
     text-decoration: none;
     padding: 1rem;
     display: block;
@@ -157,12 +140,9 @@ nav a:hover {
 nav a.active {
     background-color: var(--active-gray);
     font-weight: bold;
-    color: var(--white) !important;
 }
 
-/* ==========================================================================
-   5. HOME PAGE STYLES (Hero, Weather & Events)
-   ========================================================================== */
+/* 4. HOME PAGE STYLES */
 .hero-container {
     position: relative;
     width: 100%;
@@ -189,17 +169,16 @@ nav a.active {
     width: 90%;
 }
 
-.hero-overlay h1 {
-    margin: 0 0 0.5rem 0;
-    font-size: 2rem;
-    text-shadow: 1px 1px 4px vvar(--primary-color);
+.hero-overlay h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 4px rgb(0, 0, 0);
 }
 
 .hero-overlay p {
     font-size: 0.95rem;
     margin-bottom: 1.2rem;
-    padding: 0;
-    text-shadow: 1px 1px 3px var(--primary-color);
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
 }
 
 .cta-button {
@@ -210,7 +189,6 @@ nav a.active {
     font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
 }
 
 .cta-button:hover {
@@ -229,18 +207,16 @@ nav a.active {
     border: 1px solid var(--border-gray);
     border-radius: 6px;
     padding: 1.2rem;
-    box-shadow: 0 2px 5px var(--border-gray);
+    box-shadow: 0 2px 5px rgb(230, 230, 230);
 }
 
 .home-card h2 {
     margin-top: 0;
-    padding: 0;
     font-size: 1.3rem;
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 0.4rem;
 }
 
-/* Events List */
 .events-list {
     list-style: none;
     padding: 0;
@@ -253,12 +229,11 @@ nav a.active {
 }
 
 .events-list li:last-child {
-    border-bottom: none;
+    border-bottom: 0;
 }
 
 .events-list strong {
     display: block;
-    font-size: 1rem;
 }
 
 .events-list span {
@@ -267,12 +242,10 @@ nav a.active {
 }
 
 .events-list p {
-    margin: 0.25rem 0 0 0;
-    padding: 0;
+    margin: 0.25rem 0 0;
     font-size: 0.9rem;
 }
 
-/* Weather Component */
 .weather-main {
     display: flex;
     align-items: center;
@@ -286,19 +259,13 @@ nav a.active {
 
 #weather-desc {
     margin: 0.5rem 0;
-    padding: 0;
     font-style: italic;
 }
 
 .card-divider {
-    border: none;
+    border: 0;
     border-top: 1px solid var(--border-gray);
     margin: 1rem 0;
-}
-
-.home-card h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1rem;
 }
 
 .forecast-list {
@@ -323,15 +290,11 @@ nav a.active {
     gap: 1.5rem;
 }
 
-/* ==========================================================================
-   6. SHARED MEMBER CARDS (Works for Directory AND Spotlights)
-   ========================================================================== */
+/* 5. SHARED MEMBER CARDS */
 .member-card {
     background: var(--white);
     border: 1px solid var(--border-gray);
     border-radius: 6px;
-    padding: 0;
-    box-shadow: 0 2px 5px var(--border-gray);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -346,13 +309,11 @@ nav a.active {
 
 .member-header h3 {
     margin: 0;
-    padding: 0;
     font-size: 1.1rem;
 }
 
 .member-header .tagline {
-    margin: 0.25rem 0 0 0;
-    padding: 0;
+    margin: 0.25rem 0 0;
     font-style: italic;
     color: var(--accent-color);
     font-size: 0.85rem;
@@ -383,22 +344,18 @@ nav a.active {
 .member-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     width: 100%;
 }
 
 .info {
     font-size: 0.85rem;
     margin: 0.25rem 0;
-    padding: 0;
-    width: 100%;
     word-break: break-word;
 }
 
 .info a {
     color: var(--primary-color);
     font-weight: bold;
-    text-decoration: underline;
 }
 
 .badge {
@@ -425,9 +382,7 @@ nav a.active {
     color: var(--text-color);
 }
 
-/* ==========================================================================
-   7. DIRECTORY SPECIFIC CONTROLS
-   ========================================================================== */
+/* 6. DIRECTORY & FOOTER */
 .directory-controls {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -448,26 +403,16 @@ nav a.active {
     color: var(--white);
 }
 
-.grid-view {
+.grid-view,
+.list-view {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     padding: 1rem;
 }
 
-/* List view template overrides */
-.list-view {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem;
-}
-
 .list-view .member-card {
-    background: var(--white);
-    border: 1px solid var(--border-gray);
     padding: 1rem;
-    border-radius: 4px;
 }
 
 .list-view .member-body {
@@ -493,9 +438,6 @@ nav a.active {
     font-weight: bold;
 }
 
-/* ==========================================================================
-   8. GLOBAL FOOTER LAYOUT
-   ========================================================================== */
 .social-links {
     margin-bottom: 1rem;
 }
@@ -505,10 +447,6 @@ nav a.active {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
-}
-
-.social-links a:hover {
-    color: var(--active-gray);
 }
 
 footer p {
