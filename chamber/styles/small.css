@@ -15,7 +15,7 @@
     --background-light: #fafafa;
     --card-item-bg: #f0f0f0;
     --card-item-border: #cccccc;
-    --overlay-backdrop: #000000;
+    --transparent: #00000000;
 
     --gold-text: #856404;
     --gold-bg: #fff3cd;
@@ -43,10 +43,19 @@ body {
     background-color: var(--background-light);
 }
 
-header {
+header,
+footer {
     display: table-row;
+}
+
+header {
     background-color: var(--primary-color);
     color: var(--white);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    text-align: center;
 }
 
 main {
@@ -54,12 +63,6 @@ main {
     height: 100%;
     vertical-align: top;
     padding-bottom: 2rem;
-}
-
-footer {
-    display: table-row;
-    background-color: var(--secondary-color);
-    text-align: center;
 }
 
 .footer-content {
@@ -72,31 +75,26 @@ footer {
    ========================================================================== */
 .header-wrapper {
     display: flex;
-    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 0.5rem;
-    position: relative;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    min-width: 0;
 }
 
 .logo-container .logo {
     width: 38px;
     height: auto;
-    flex-shrink: 0;
     display: block;
 }
 
 .branding {
     display: flex;
     flex-direction: column;
-    min-width: 0;
 }
 
 .branding .student-name {
@@ -104,8 +102,6 @@ footer {
     font-size: 0.75rem;
     color: var(--white);
     opacity: 0.9;
-    line-height: 1.2;
-    word-wrap: break-word;
 }
 
 .branding h1 {
@@ -115,13 +111,12 @@ footer {
 }
 
 #menu-toggle {
-    background: transparent;
+    background-color: var(--transparent);
     border: 0;
     color: var(--white);
     font-size: 1.6rem;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
-    flex-shrink: 0;
 }
 
 nav {
@@ -152,17 +147,7 @@ nav a:hover {
 
 nav a.active {
     background-color: var(--active-gray);
-    font-weight: bold;
-}
-
-@media (max-width: 360px) {
-    .branding .student-name {
-        font-size: 0.68rem;
-    }
-
-    .logo-container .logo {
-        width: 32px;
-    }
+    font-weight: 700;
 }
 
 /* ==========================================================================
@@ -211,7 +196,7 @@ nav a.active {
     padding: 0.75rem 1.5rem;
     background-color: var(--white);
     color: var(--primary-color);
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -221,7 +206,8 @@ nav a.active {
 }
 
 .home-grid,
-.spotlights-grid {
+.spotlights-grid,
+.cards-container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -231,19 +217,32 @@ nav a.active {
     padding: 1.5rem 1rem;
 }
 
-.home-card {
-    background: var(--white);
+.home-card,
+.member-card,
+.level-card,
+.results-card {
+    background-color: var(--white);
     border: 1px solid var(--border-gray);
     border-radius: 6px;
+}
+
+.home-card,
+.level-card,
+.results-card {
     padding: 1.2rem;
-    box-shadow: 0 2px 5px var(--secondary-color);
+}
+
+.home-card h2,
+.form-container h2,
+.cards-container h2,
+.modal-content h3 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.4rem;
 }
 
 .home-card h2 {
-    margin-top: 0;
     font-size: 1.3rem;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.4rem;
 }
 
 .events-list {
@@ -283,7 +282,7 @@ nav a.active {
 
 #current-temp {
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 #weather-desc {
@@ -309,7 +308,7 @@ nav a.active {
 }
 
 .forecast-item .day {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 0.9rem;
 }
 
@@ -317,9 +316,6 @@ nav a.active {
    5. SHARED MEMBER CARDS
    ========================================================================== */
 .member-card {
-    background: var(--white);
-    border: 1px solid var(--border-gray);
-    border-radius: 6px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -379,16 +375,17 @@ nav a.active {
 }
 
 .info a,
-.list-item-row a {
+.list-item-row a,
+.social-links a {
     color: var(--primary-color);
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
     font-size: 0.8rem;
-    font-weight: bold;
+    font-weight: 700;
     border-radius: 4px;
     margin-top: 0.5rem;
 }
@@ -416,19 +413,28 @@ nav a.active {
     margin-bottom: 1.5rem;
 }
 
+.toggle-buttons button,
+.info-btn,
+.submit-btn,
+.close-modal {
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
 .toggle-buttons button {
     padding: 0.6rem 1.5rem;
     border: 1px solid var(--card-item-border);
     background-color: var(--secondary-color);
     color: var(--text-color);
-    cursor: pointer;
-    border-radius: 4px;
-    font-weight: bold;
 }
 
-.toggle-buttons button.active {
+.toggle-buttons button.active,
+.submit-btn,
+.close-modal {
     background-color: var(--primary-color);
     color: var(--white);
+    border: 0;
 }
 
 .grid-view,
@@ -467,9 +473,7 @@ nav a.active {
 
 .social-links a {
     margin: 0 0.5rem;
-    color: var(--primary-color);
     text-decoration: none;
-    font-weight: bold;
 }
 
 footer p {
@@ -488,13 +492,6 @@ footer p {
     margin: 0 auto;
 }
 
-.form-container h2,
-.cards-container h2 {
-    margin-top: 0;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.5rem;
-}
-
 #join-form {
     display: flex;
     flex-direction: column;
@@ -504,7 +501,7 @@ footer p {
 #join-form label {
     display: flex;
     flex-direction: column;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 0.95rem;
 }
 
@@ -535,7 +532,7 @@ footer p {
 }
 
 .membership-selection legend {
-    font-weight: bold;
+    font-weight: 700;
     padding: 0 0.5rem;
 }
 
@@ -543,33 +540,16 @@ footer p {
     flex-direction: row !important;
     align-items: center;
     gap: 0.5rem;
-    font-weight: normal !important;
+    font-weight: 400 !important;
     cursor: pointer;
 }
 
 .submit-btn {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: 0;
     padding: 0.85rem;
     font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* CARDS & INITIAL ANIMATION */
-.cards-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
 }
 
 .level-card {
-    background-color: var(--white);
-    border: 1px solid var(--secondary-color);
-    padding: 1.2rem;
-    border-radius: 6px;
     text-align: center;
 }
 
@@ -582,9 +562,6 @@ footer p {
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
     padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
 }
 
 .animated-card {
@@ -613,30 +590,14 @@ dialog.membership-modal {
     box-shadow: 0 4px 10px var(--border-gray);
 }
 
-dialog::backdrop {
-    background-color: var(--overlay-backdrop);
-    opacity: 0.6;
-}
-
 .modal-content {
     padding: 1.5rem;
     background-color: var(--white);
     color: var(--text-color);
 }
 
-.modal-content h3 {
-    margin-top: 0;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.4rem;
-}
-
 .close-modal {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: 0;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
     margin-top: 1rem;
 }
 
@@ -648,10 +609,6 @@ dialog::backdrop {
 }
 
 .results-card {
-    background-color: var(--white);
-    border: 1px solid var(--secondary-color);
-    padding: 1.5rem;
-    border-radius: 6px;
     margin-top: 1.5rem;
 }
 
