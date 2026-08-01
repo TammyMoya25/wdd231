@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. COLOR VARIABLES & DESIGN TOKENS
+   1. VARIABLES & RESET BASE
    ========================================================================== */
 :root {
     --primary-color: #1a1a1a;
@@ -25,9 +25,6 @@
     --font-stack: Arial, sans-serif;
 }
 
-/* ==========================================================================
-   2. STICKY FOOTER & LAYOUT BASE
-   ========================================================================== */
 html,
 body {
     height: 100%;
@@ -65,9 +62,64 @@ main {
     padding-bottom: 2rem;
 }
 
-.footer-content {
-    display: block;
-    padding: 1.5rem 1rem;
+/* ==========================================================================
+   2. REGLAS COMPARTIDAS Y BOTONES (REDUCCIÓN DRÁSTICA)
+   ========================================================================== */
+.home-card,
+.member-card,
+.level-card,
+.results-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-gray);
+    border-radius: 6px;
+}
+
+.home-card,
+.level-card,
+.results-card,
+.modal-content {
+    padding: 1.2rem;
+}
+
+.home-card h2,
+.form-container h2,
+.cards-container h2,
+.modal-content h3 {
+    margin: 0 0 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.4rem;
+}
+
+.cta-button,
+.toggle-buttons button,
+.info-btn,
+.submit-btn,
+.close-modal {
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.cta-button,
+.info-btn {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+.toggle-buttons button.active,
+.submit-btn,
+.close-modal {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 0;
+}
+
+.info a,
+.list-item-row a,
+.social-links a {
+    color: var(--primary-color);
+    font-weight: 700;
 }
 
 /* ==========================================================================
@@ -151,7 +203,7 @@ nav a.active {
 }
 
 /* ==========================================================================
-   4. HOME PAGE STYLES
+   4. HOME & SPOTLIGHTS
    ========================================================================== */
 .hero-container {
     position: relative;
@@ -194,11 +246,6 @@ nav a.active {
 .cta-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: var(--white);
-    color: var(--primary-color);
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 5px;
 }
 
 .cta-button:hover {
@@ -207,42 +254,18 @@ nav a.active {
 
 .home-grid,
 .spotlights-grid,
-.cards-container {
+.cards-container,
+.grid-view,
+.list-view {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.home-grid {
+.home-grid,
+.grid-view,
+.list-view {
     padding: 1.5rem 1rem;
-}
-
-.home-card,
-.member-card,
-.level-card,
-.results-card {
-    background-color: var(--white);
-    border: 1px solid var(--border-gray);
-    border-radius: 6px;
-}
-
-.home-card,
-.level-card,
-.results-card {
-    padding: 1.2rem;
-}
-
-.home-card h2,
-.form-container h2,
-.cards-container h2,
-.modal-content h3 {
-    margin-top: 0;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.4rem;
-}
-
-.home-card h2 {
-    font-size: 1.3rem;
 }
 
 .events-list {
@@ -274,8 +297,13 @@ nav a.active {
     font-size: 0.9rem;
 }
 
-.weather-main {
+.weather-main,
+.forecast-list,
+.forecast-item {
     display: flex;
+}
+
+.weather-main {
     align-items: center;
     gap: 1rem;
 }
@@ -297,13 +325,11 @@ nav a.active {
 }
 
 .forecast-list {
-    display: flex;
     justify-content: space-around;
     text-align: center;
 }
 
 .forecast-item {
-    display: flex;
     flex-direction: column;
 }
 
@@ -313,7 +339,7 @@ nav a.active {
 }
 
 /* ==========================================================================
-   5. SHARED MEMBER CARDS
+   5. DIRECTORY & MEMBER CARDS
    ========================================================================== */
 .member-card {
     display: flex;
@@ -362,7 +388,8 @@ nav a.active {
     object-fit: contain;
 }
 
-.member-info {
+.member-info,
+.list-item-row {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -372,13 +399,6 @@ nav a.active {
     font-size: 0.85rem;
     margin: 0.25rem 0;
     word-break: break-word;
-}
-
-.info a,
-.list-item-row a,
-.social-links a {
-    color: var(--primary-color);
-    font-weight: 700;
 }
 
 .badge {
@@ -405,21 +425,9 @@ nav a.active {
     color: var(--text-color);
 }
 
-/* ==========================================================================
-   6. DIRECTORY & FOOTER
-   ========================================================================== */
 .directory-controls {
     text-align: center;
     margin-bottom: 1.5rem;
-}
-
-.toggle-buttons button,
-.info-btn,
-.submit-btn,
-.close-modal {
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 700;
 }
 
 .toggle-buttons button {
@@ -427,22 +435,6 @@ nav a.active {
     border: 1px solid var(--card-item-border);
     background-color: var(--secondary-color);
     color: var(--text-color);
-}
-
-.toggle-buttons button.active,
-.submit-btn,
-.close-modal {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: 0;
-}
-
-.grid-view,
-.list-view {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem;
 }
 
 .list-view .member-card {
@@ -455,12 +447,6 @@ nav a.active {
 
 .list-view .img-frame {
     display: none;
-}
-
-.list-item-row {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
 }
 
 .list-item-row h3 {
@@ -476,12 +462,17 @@ nav a.active {
     text-decoration: none;
 }
 
+.footer-content {
+    display: block;
+    padding: 1.5rem 1rem;
+}
+
 footer p {
     margin: 0.5rem 0;
 }
 
 /* ==========================================================================
-   7. JOIN PAGE & FORM STYLES
+   6. JOIN & THANK YOU PAGES
    ========================================================================== */
 .join-layout {
     display: flex;
@@ -492,15 +483,18 @@ footer p {
     margin: 0 auto;
 }
 
-#join-form {
+#join-form,
+#join-form label,
+.membership-selection {
     display: flex;
     flex-direction: column;
+}
+
+#join-form {
     gap: 1rem;
 }
 
 #join-form label {
-    display: flex;
-    flex-direction: column;
     font-weight: 700;
     font-size: 0.95rem;
 }
@@ -526,8 +520,6 @@ footer p {
     border: 1px solid var(--secondary-color);
     border-radius: 4px;
     padding: 1rem;
-    display: flex;
-    flex-direction: column;
     gap: 0.5rem;
 }
 
@@ -558,8 +550,6 @@ footer p {
 }
 
 .info-btn {
-    background-color: var(--white);
-    color: var(--primary-color);
     border: 1px solid var(--primary-color);
     padding: 0.5rem 1rem;
 }
@@ -580,7 +570,6 @@ footer p {
     }
 }
 
-/* DIALOG / MODAL STYLES */
 dialog.membership-modal {
     border: 0;
     border-radius: 8px;
@@ -590,18 +579,11 @@ dialog.membership-modal {
     box-shadow: 0 4px 10px var(--border-gray);
 }
 
-.modal-content {
-    padding: 1.5rem;
-    background-color: var(--white);
-    color: var(--text-color);
-}
-
 .close-modal {
     padding: 0.5rem 1rem;
     margin-top: 1rem;
 }
 
-/* THANK YOU PAGE STYLES */
 .thankyou-main {
     max-width: 800px;
     margin: 0 auto;
