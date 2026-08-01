@@ -9,13 +9,13 @@
 
     --white: #ffffff;
     --black: #000000;
-    --transparent: #00000000;
     --border-gray: #dddddd;
     --dark-border: #444444;
     --active-gray: #555555;
     --background-light: #fafafa;
     --card-item-bg: #f0f0f0;
     --card-item-border: #cccccc;
+    --overlay-backdrop: #000000;
 
     --gold-text: #856404;
     --gold-bg: #fff3cd;
@@ -75,47 +75,53 @@ footer {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0.75rem 0.5rem;
     position: relative;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
+    min-width: 0;
 }
 
 .logo-container .logo {
-    width: 40px;
+    width: 38px;
     height: auto;
+    flex-shrink: 0;
     display: block;
 }
 
 .branding {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .branding .student-name {
     margin: 0;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--white);
     opacity: 0.9;
+    line-height: 1.2;
+    word-wrap: break-word;
 }
 
 .branding h1 {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--white);
 }
 
 #menu-toggle {
-    background: var(--transparent);
+    background: transparent;
     border: 0;
     color: var(--white);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    flex-shrink: 0;
 }
 
 nav {
@@ -147,6 +153,16 @@ nav a:hover {
 nav a.active {
     background-color: var(--active-gray);
     font-weight: bold;
+}
+
+@media (max-width: 360px) {
+    .branding .student-name {
+        font-size: 0.68rem;
+    }
+
+    .logo-container .logo {
+        width: 32px;
+    }
 }
 
 /* ==========================================================================
@@ -204,10 +220,14 @@ nav a.active {
     background-color: var(--secondary-color);
 }
 
-.home-grid {
+.home-grid,
+.spotlights-grid {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+.home-grid {
     padding: 1.5rem 1rem;
 }
 
@@ -293,12 +313,6 @@ nav a.active {
     font-size: 0.9rem;
 }
 
-.spotlights-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
 /* ==========================================================================
    5. SHARED MEMBER CARDS
    ========================================================================== */
@@ -364,7 +378,8 @@ nav a.active {
     word-break: break-word;
 }
 
-.info a {
+.info a,
+.list-item-row a {
     color: var(--primary-color);
     font-weight: bold;
 }
@@ -446,11 +461,6 @@ nav a.active {
     margin: 0;
 }
 
-.list-item-row a {
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
 .social-links {
     margin-bottom: 1rem;
 }
@@ -467,7 +477,7 @@ footer p {
 }
 
 /* ==========================================================================
-   JOIN PAGE & FORM STYLES
+   7. JOIN PAGE & FORM STYLES
    ========================================================================== */
 .join-layout {
     display: flex;
@@ -577,7 +587,6 @@ footer p {
     font-weight: bold;
 }
 
-/* Keyframe animation on load */
 .animated-card {
     animation: fadeInSlide 1s ease-out forwards;
 }
@@ -601,11 +610,12 @@ dialog.membership-modal {
     padding: 0;
     max-width: 500px;
     width: 90%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px var(--border-gray);
 }
 
 dialog::backdrop {
-    background: rgba(0, 0, 0, 0.6);
+    background-color: var(--overlay-backdrop);
+    opacity: 0.6;
 }
 
 .modal-content {
