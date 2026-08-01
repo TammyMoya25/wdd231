@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popcorn Flicks Site Plan</title>
+    <meta name="description"
+        content="Site plan document for Popcorn Flicks outlining design choices, typography, color palette, and wireframes.">
+    <meta name="author" content="Tamara Moya">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/site-plan.css">
+</head>
+
+<body>
+    <header>
+        <h1>Popcorn Flicks Site Plan</h1>
+    </header>
+
+    <main>
+        <!-- 1. Site Name -->
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>Site Name:</strong> Popcorn Flicks</p>
+            <p><strong>Why this name was selected:</strong> "Popcorn Flicks" immediately conveys a fun, easygoing, and
+                entertaining movie experience. It reflects the site's goal of helping users find quick, engaging movies
+                to watch without endless scrolling.</p>
+        </section>
+
+        <hr>
+
+        <!-- 2. Site Purpose -->
+        <section>
+            <h2>Site Purpose</h2>
+            <p>The purpose of Popcorn Flicks is to solve decision paralysis for movie viewers by providing a curated,
+                searchable hub of high-rated, shorter, and crowd-pleasing films. The site allows users to filter movies
+                by mood or runtime, save favorite picks into a custom watchlist using <code>localStorage</code>, view
+                extended movie details via dynamic modals, and submit movie suggestions through an interactive form.</p>
+        </section>
+
+        <hr>
+
+        <!-- 3. Scenarios -->
+        <section>
+            <h2>Target Audience Scenarios</h2>
+            <ul>
+                <li><strong>Scenario 1:</strong> "I only have 90 minutes before bedtime—what is a short, fun movie I can
+                    watch tonight?"</li>
+                <li><strong>Scenario 2:</strong> "I want something light and comforting after a long workday; how can I
+                    filter movies specifically by mood?"</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- 4. Color Scheme -->
+        <section>
+            <h2>Color Scheme</h2>
+            <p>The color palette is designed to evoke a dark cinema vibe while maintaining accessibility and
+                readability.</p>
+
+            <div class="color-palette">
+                <div class="color-box primary-bg">
+                    <strong>Primary Background</strong><br>#121212
+                </div>
+                <div class="color-box card-bg">
+                    <strong>Card / Surface</strong><br>#1F1F1F
+                </div>
+                <div class="color-box accent-color">
+                    <strong>Primary Accent</strong><br>#E50914
+                </div>
+                <div class="color-box gold-accent">
+                    <strong>Secondary Accent</strong><br>#FFD700
+                </div>
+                <div class="color-box text-color">
+                    <strong>Primary Text</strong><br>#FFFFFF
+                </div>
+            </div>
+
+            <ul>
+                <li><strong>Primary Dark (#121212):</strong> Used as the main body background to establish a sleek
+                    theater dark mode.</li>
+                <li><strong>Card Surface (#1F1F1F):</strong> Used for movie cards, navigation background, and section
+                    containers to create visual contrast.</li>
+                <li><strong>Popcorn Red Accent (#E50914):</strong> Used for buttons, active state highlights, borders,
+                    and call-to-action elements.</li>
+                <li><strong>Cinema Gold (#FFD700):</strong> Used for star ratings, secondary badges, and highlighted
+                    text.</li>
+                <li><strong>Primary Text (#FFFFFF):</strong> Used for main body text and headings to ensure high
+                    contrast and legibility.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- 5. Typography -->
+        <section>
+            <h2>Typography</h2>
+            <p>Two complementary Google Fonts are used throughout the site to create a clean, modern typographic
+                hierarchy:</p>
+
+            <div class="font-demo">
+                <h3 class="font-heading-demo">Montserrat (Headings & Navigation)</h3>
+                <p>Used for all primary title tags (<code>h1</code>, <code>h2</code>, <code>h3</code>), brand logo text,
+                    and main navigation links. Gives a bold, movie-poster feel.</p>
+
+                <p class="font-body-demo"><strong>Open Sans (Body Text & Content):</strong> Used for all paragraphs,
+                    movie descriptions, card details, form controls, and footer information to ensure clean readability
+                    on mobile and desktop screens.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 6. Wireframes -->
+        <section>
+            <h2>Wireframes</h2>
+            <p>Below are the mobile and desktop wireframe sketches for the three primary pages of the Popcorn Flicks
+                website.
+            </p>
+
+            <div class="wireframe-group">
+                <h3>Desktop View</h3>
+                <div class="wireframe-images">
+                    <div class="wireframe-card">
+                        <h4>1. Home Page (index.html)</h4>
+                        <img src="images/wireframe-home-desktop.png" alt="Home page mobile wireframe sketch"
+                            loading="lazy">
+                    </div>
+                    <div class="wireframe-card">
+                        <h4>2. Watchlist Page (watchlist.html)</h4>
+                        <img src="images/wireframe-watchlist-desktop.png" alt="Home page desktop wireframe sketch"
+                            loading="lazy">
+                    </div>
+                    <div class="wireframe-card">
+                        <h4>3. Suggestion Form Page (suggest.html)</h4>
+                        <img src="images/wireframe-suggest-desktop.png" alt="Home page desktop wireframe sketch"
+                            loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Home Page Wireframes -->
+            <div class="wireframe-group">
+                <h3>Mobile View</h3>
+                <div class="wireframe-images">
+                    <div class="wireframe-card">
+                        <h4>1. Home Page (index.html)</h4>
+                        <img src="images/wireframe-home-mobile.png" alt="Home page mobile wireframe sketch"
+                            loading="lazy">
+                    </div>
+                    <div class="wireframe-card">
+                        <h4>2. Watchlist Page (watchlist.html)</h4>
+                        <img src="images/wireframe-watchlist-mobile.png" alt="Watchlist page mobile wireframe sketch"
+                            loading="lazy">
+                    </div>
+                    <div class="wireframe-card">
+                        <h4>3. Suggestion Form Page (suggest.html)</h4>
+                        <img src="images/wireframe-suggest-mobile.png" alt="Suggest form page mobile wireframe sketch"
+                            loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Tamara Moya | Popcorn Flicks | Site Plan </p>
+    </footer>
+</body>
+
+</html>
