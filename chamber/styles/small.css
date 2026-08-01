@@ -72,7 +72,7 @@ footer {
    ========================================================================== */
 .header-wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
@@ -464,4 +464,189 @@ nav a.active {
 
 footer p {
     margin: 0.5rem 0;
+}
+
+/* ==========================================================================
+   JOIN PAGE & FORM STYLES
+   ========================================================================== */
+.join-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form-container h2,
+.cards-container h2 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+#join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#join-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+#join-form input[type="text"],
+#join-form input[type="email"],
+#join-form input[type="tel"],
+#join-form textarea {
+    padding: 0.75rem;
+    margin-top: 0.3rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-stack);
+}
+
+#join-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.membership-selection {
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.membership-selection legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+.radio-label {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal !important;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 0;
+    padding: 0.85rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* CARDS & INITIAL ANIMATION */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.level-card {
+    background-color: var(--white);
+    border: 1px solid var(--secondary-color);
+    padding: 1.2rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.level-card h3 {
+    margin-top: 0;
+}
+
+.info-btn {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Keyframe animation on load */
+.animated-card {
+    animation: fadeInSlide 1s ease-out forwards;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* DIALOG / MODAL STYLES */
+dialog.membership-modal {
+    border: 0;
+    border-radius: 8px;
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    padding: 1.5rem;
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.4rem;
+}
+
+.close-modal {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* THANK YOU PAGE STYLES */
+.thankyou-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.results-card {
+    background-color: var(--white);
+    border: 1px solid var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-top: 1.5rem;
+}
+
+.results-card p {
+    margin: 0.75rem 0;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
 }

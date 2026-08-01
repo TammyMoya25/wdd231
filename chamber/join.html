@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Join Us | San Jose Costa Rica Chamber of Commerce</title>
+    <meta name="description" content="Join the Chamber of Commerce to grow your business and network.">
+    <meta name="author" content="Tamara Moya">
+
+    <!-- FaceBook Open Graph Metadata -->
+    <meta property="og:title" content="Apex Regional Chamber of Commerce Join Us">
+    <meta property="og:description"
+        content="Connecting businesses, driving economic growth, and building a prosperous community. Join our certified member network.">
+    <meta property="og:image" content="https://tammymoya25.github.io/wdd231/chamber/images/chamber-og-preview.jpg">
+    <meta property="og:url" content="https://tammymoya25.github.io/wdd231/chamber/join.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Local independent styles for Chamber site -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="../images/favicon.ico">
+
+    <!-- Script location updated to scripts/ folder -->
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="logo-container">
+                <img src="images/logo.svg" alt="Chamber logo" class="logo" width="50" height="50">
+                <div class="branding">
+                    <span class="student-name">San Jose, Costa Rica | Chamber of Commerce</span>
+                </div>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle navigation Menu">&#9776;</button>
+            <nav id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="join.html" class="active">Join</a>
+                <a href="#">Discover</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="join-layout">
+        <section class="form-container">
+            <h2>Membership Application</h2>
+            <form method="get" action="thankyou.html" id="join-form">
+
+                <label>First Name*
+                    <input type="text" name="fname" id="fname" required title="Please enter your first name"
+                        autocomplete="given-name">
+                </label>
+
+                <label>Last Name*
+                    <input type="text" name="lname" id="lname" required title="Please enter your last name"
+                        autocomplete="family-name">
+                </label>
+
+                <label>Organizational Title
+                    <input type="text" name="orgtitle" id="orgtitle"
+                        title="Title must contain only letters, spaces, or hyphens and be at least 7 characters long"
+                        autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                </label>
+
+                <label>Email Address*
+                    <input type="email" name="email" id="email" required title="Enter a valid email address"
+                        autocomplete="email" placeholder="example@domain.com">
+                </label>
+
+                <label>Mobile Phone Number*
+                    <input type="tel" name="phone" id="phone" required title="Please enter your mobile phone number"
+                        autocomplete="tel">
+                </label>
+
+                <label>Business / Organization Name*
+                    <input type="text" name="organization" id="organization" required
+                        title="Please enter your business or organization name" autocomplete="organization">
+                </label>
+
+                <fieldset class="membership-selection">
+                    <legend>Membership Level*</legend>
+                    <label class="radio-label">
+                        <input type="radio" name="membership" value="np" required> NP Membership (Non-Profit - Free)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="membership" value="bronze"> Bronze Membership
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="membership" value="silver"> Silver Membership
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="membership" value="gold"> Gold Membership
+                    </label>
+                </fieldset>
+
+                <label>Business / Organization Description
+                    <textarea name="description" id="description"
+                        title="Describe your business or organization"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <input type="submit" value="Complete Registration" class="submit-btn">
+            </form>
+        </section>
+
+        <!-- MEMBERSHIP CARDS SECTION -->
+        <section class="cards-container">
+            <h2>Membership Levels</h2>
+
+            <div class="level-card animated-card">
+                <h3>NP Membership</h3>
+                <p>Designed for non-profit organizations seeking community involvement.</p>
+                <button class="info-btn" data-modal="modal-np">Learn Benefits</button>
+            </div>
+
+            <div class="level-card animated-card">
+                <h3>Bronze Membership</h3>
+                <p>Ideal for small businesses starting their networking journey.</p>
+                <button class="info-btn" data-modal="modal-bronze">Learn Benefits</button>
+            </div>
+
+            <div class="level-card animated-card">
+                <h3>Silver Membership</h3>
+                <p>Great growth potential with added advertising perks.</p>
+                <button class="info-btn" data-modal="modal-silver">Learn Benefits</button>
+            </div>
+
+            <div class="level-card animated-card">
+                <h3>Gold Membership</h3>
+                <p>Maximum exposure, event discounts, and home page spotlighting.</p>
+                <button class="info-btn" data-modal="modal-gold">Learn Benefits</button>
+            </div>
+        </section>
+
+        <!-- HTML MODALS -->
+        <dialog id="modal-np" class="membership-modal">
+            <div class="modal-content">
+                <h3>NP Membership Benefits</h3>
+                <p><strong>Cost:</strong> Free</p>
+                <ul>
+                    * Community Directory Listing
+                    * Access to Member Events
+                    * Volunteer Opportunities
+                </ul>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-bronze" class="membership-modal">
+            <div class="modal-content">
+                <h3>Bronze Membership Benefits</h3>
+                <p><strong>Cost:</strong> $150 / year</p>
+                <ul>
+                    * Standard Directory Listing
+                    * Event Attendance Discounts
+                    * Monthly Networking Meetings
+                </ul>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-silver" class="membership-modal">
+            <div class="modal-content">
+                <h3>Silver Membership Benefits</h3>
+                <p><strong>Cost:</strong> $300 / year</p>
+                <ul>
+                    * Highlighted Directory Listing
+                    * 10% Discount on Event Sponsorships
+                    * Category Training Workshops
+                    * Shared Social Media Mentions
+                </ul>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-gold" class="membership-modal">
+            <div class="modal-content">
+                <h3>Gold Membership Benefits</h3>
+                <p><strong>Cost:</strong> $500 / year</p>
+                <ul>
+                    * Home Page Spotlight Feature
+                    * 25% Discount on Special Events
+                    * VIP Access to Executive Meetings
+                    * Dedicated Social Media Campaigns
+                </ul>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repository">GitHub</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X Account">X</a>
+            </div>
+            <p>&copy;<span id="currentyear"></span> | Tamara Moya | San Jose, Costa Rica</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
