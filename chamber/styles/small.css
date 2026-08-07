@@ -603,3 +603,125 @@ dialog.membership-modal {
     border-bottom: 1px solid var(--secondary-color);
     padding-bottom: 0.5rem;
 }
+
+/* ==========================================================================
+   DISCOVER PAGE & GRID AREAS (SMALL VIEW)
+   ========================================================================== */
+.visitor-banner {
+    background-color: var(--gold-bg);
+    color: var(--gold-text);
+    border: 1px solid var(--gold-text);
+    padding: 0.85rem 1rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.discover-container {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-areas:
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "item5"
+        "item6"
+        "item7"
+        "item8";
+}
+
+.discover-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-gray);
+    border-radius: 6px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Mapping item IDs to grid-areas */
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+.item5 {
+    grid-area: item5;
+}
+
+.item6 {
+    grid-area: item6;
+}
+
+.item7 {
+    grid-area: item7;
+}
+
+.item8 {
+    grid-area: item8;
+}
+
+.discover-card h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--primary-color);
+    width: 100%;
+}
+
+.discover-card figure {
+    margin: 0.75rem 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.discover-card img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.discover-card address {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--active-gray);
+    margin-bottom: 0.5rem;
+}
+
+.discover-card p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.learn-more-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: auto;
+}

@@ -1,3 +1,6 @@
+/* ==========================================================================
+   TABLET & DESKTOP GENERAL STYLES (min-width: 768px)
+   ========================================================================== */
 @media (min-width: 768px) {
     #menu-toggle {
         display: none;
@@ -8,10 +11,12 @@
     }
 
     nav {
-        display: block !important;
+        display: flex !important;
+        flex-direction: row;
         position: static;
         width: auto;
-        background: var(--transparent);
+        background-color: var(--transparent);
+        margin-top: 0;
     }
 
     nav a {
@@ -95,5 +100,48 @@
         grid-template-columns: 3fr 2fr;
         align-items: start;
         gap: 2.5rem;
+    }
+}
+
+/* ==========================================================================
+   DISCOVER PAGE GRID AREAS & HOVER EFFECTS (MEDIUM VIEWS: 641px to 1024px)
+   ========================================================================== */
+@media screen and (min-width: 641px) {
+    .discover-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "item1 item2"
+            "item3 item4"
+            "item5 item6"
+            "item7 item8";
+    }
+
+    /* CSS Hover Effect on images (desktop/tablet only - rubric requirement) */
+    .discover-card figure {
+        overflow: hidden;
+        border-radius: 4px;
+    }
+
+    .discover-card img {
+        transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .discover-card figure:hover img {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+        box-shadow: 0 4px 12px var(--border-gray);
+    }
+}
+
+/* ==========================================================================
+   DISCOVER PAGE GRID AREAS (LARGE VIEWS: 1025px and above)
+   ========================================================================== */
+@media screen and (min-width: 1025px) {
+    .discover-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "item1 item1 item2 item3"
+            "item4 item5 item5 item3"
+            "item4 item6 item7 item8";
     }
 }
