@@ -1,0 +1,358 @@
+/* Custom Properties (Variables) */
+:root {
+    --bg-primary: #121212;
+    --bg-surface: #1F1F1F;
+    --accent-red: #E50914;
+    --accent-gold: #FFD700;
+    --text-main: #FFFFFF;
+    --text-muted: #CCCCCC;
+    --border-color: #333333;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-main);
+}
+
+/* Header & Navigation (Responsive) */
+header {
+    background-color: var(--bg-surface);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--accent-red);
+    position: relative;
+}
+
+.logo h2 {
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+}
+
+#menu-btn {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--border-color);
+}
+
+/* Wayfinding */
+nav a.active {
+    border-bottom: 2px solid var(--accent-red);
+    color: var(--accent-gold);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.9));
+}
+
+.hero h1 {
+    color: var(--accent-red);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.filter-btn {
+    background-color: var(--bg-surface);
+    color: var(--text-main);
+    border: 2px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--accent-red);
+    border-color: var(--accent-red);
+}
+
+/* Grid Layout & Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie-card {
+    background-color: var(--bg-surface);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-card img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.movie-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.card-actions {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card-actions button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.details-btn {
+    background-color: var(--text-muted);
+    color: var(--bg-primary);
+}
+
+.details-btn:hover {
+    background-color: white;
+}
+
+.save-btn {
+    background-color: var(--accent-gold);
+    color: var(--bg-primary);
+}
+
+.save-btn:hover {
+    background-color: #ffd700cc;
+}
+
+/* Modal Dialog */
+dialog {
+    margin: auto;
+    background-color: var(--bg-surface);
+    color: var(--text-main);
+    border: 2px solid var(--accent-red);
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    padding: 0;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    padding: 20px;
+    position: relative;
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#modal-details h2 {
+    margin-bottom: 10px;
+    color: var(--accent-gold);
+}
+
+#modal-details p {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+}
+
+footer a {
+    color: var(--accent-gold);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    #menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--bg-surface);
+        padding: 15px 0;
+        z-index: 10;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    nav ul.open {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Forms & Watchlist Additions */
+.form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--accent-gold);
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent-red);
+}
+
+.submit-btn {
+    background-color: var(--accent-red);
+    color: var(--text-main);
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #b80710;
+}
+
+.empty-msg {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 40px;
+}
+
+.empty-msg h3 {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-red);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}

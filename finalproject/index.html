@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popcorn Flicks | Find What to Watch Tonight</title>
+
+    <!-- SEO and Metadata -->
+    <meta name="description"
+        content="Discover great movies to watch based on your mood. Popcorn Flicks offers curated movie recommendations to cure decision paralysis.">
+    <meta name="author" content="Tamara Moya">
+
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="Popcorn Flicks | Movie Recommendations">
+    <meta property="og:description" content="Find the perfect movie for your current mood. No endless scrolling.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://placehold.co/1200x630/E50914/FFFFFF?text=Popcorn+Flicks">
+    <meta property="og:url" content="https://yourgithubusername.github.io/wdd231/final/index.html">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍿</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- JavaScript (ES Module) -->
+    <script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h2>🍿 Popcorn Flicks</h2>
+        </div>
+        <button id="menu-btn" aria-label="Toggle navigation menu">&#9776;</button>
+        <nav id="nav-menu">
+            <ul>
+                <!-- Wayfinding: 'active' class on the current page -->
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="watchlist.html">Watchlist</a></li>
+                <li><a href="suggest.html">Suggest</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>FIND WHAT TO WATCH TONIGHT</h1>
+            <p>No endless scrolling. Just great movies matched to your vibe.</p>
+        </section>
+
+        <section class="filters" aria-label="Movie Mood Filters">
+            <button class="filter-btn active" data-mood="All">All</button>
+            <button class="filter-btn" data-mood="Mindless Fun">Mindless Fun</button>
+            <button class="filter-btn" data-mood="Spooky">Spooky</button>
+            <button class="filter-btn" data-mood="Heartwarming">Heartwarming</button>
+            <button class="filter-btn" data-mood="Action">Action</button>
+        </section>
+
+        <!-- Dynamic Content Generation Target -->
+        <section id="movie-grid" class="grid" aria-label="Movie Recommendations Grid">
+            <!-- Movie cards will be injected here via JavaScript -->
+        </section>
+
+        <!-- Modal Dialog for Movie Details -->
+        <dialog id="movie-modal">
+            <div class="modal-content">
+                <button id="close-modal" aria-label="Close modal">&times;</button>
+                <div id="modal-details">
+                    <!-- Dynamic details injected here -->
+                </div>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Popcorn Flicks | Tamara Moya</p>
+        <p><a href="site-plan.html">Site Plan</a> | <a href="attributions.html">Attributions</a></p>
+    </footer>
+</body>
+
+</html>

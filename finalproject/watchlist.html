@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popcorn Flicks | Your Watchlist</title>
+
+    <meta name="description" content="View your saved movie recommendations on Popcorn Flicks.">
+    <meta name="author" content="Tamara Moya">
+    <meta property="og:title" content="Popcorn Flicks | Watchlist">
+    <meta property="og:type" content="website">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍿</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Script específico para leer el LocalStorage -->
+    <script type="module" src="scripts/watchlist.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h2>🍿 Popcorn Flicks</h2>
+        </div>
+        <button id="menu-btn" aria-label="Toggle navigation menu">&#9776;</button>
+        <nav id="nav-menu">
+            <ul>
+                <!-- Wayfinding: 'active' class en Watchlist -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="watchlist.html" class="active">Watchlist</a></li>
+                <li><a href="suggest.html">Suggest</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>YOUR SAVED WATCHLIST</h1>
+            <p>Your saved choices stored locally in your browser.</p>
+        </section>
+
+        <!-- Aquí se inyectarán las películas guardadas -->
+        <section id="watchlist-grid" class="grid" aria-label="Saved Movies Grid">
+            <!-- Dynamic content goes here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Popcorn Flicks | Tamara Moya</p>
+        <p><a href="site-plan.html">Site Plan</a> | <a href="attributions.html">Attributions</a></p>
+    </footer>
+</body>
+
+</html>
