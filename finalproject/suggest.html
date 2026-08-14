@@ -5,24 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Popcorn Flicks | Suggest a Movie</title>
-    <meta name="description" content="Suggest a movie to be added to Popcorn Flicks.">
+    <meta name="description" content="This page is to suggest a movie to be added to Popcorn Flicks. Let's do it.">
     <meta name="author" content="Tamara Moya">
 
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍿</text></svg>">
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="Popcorn Flicks | Movie Recommendations">
+    <meta property="og:description" content="Find the perfect movie for your current mood. No endless scrolling.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://placehold.co/1200x630/E50914/FFFFFF?text=Popcorn+Flicks">
+    <meta property="og:url" content="https://yourgithubusername.github.io/wdd231/final/index.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-            document.getElementById('menu-btn').addEventListener('click', () => {
-                document.querySelector('#nav-menu ul').classList.toggle('open');
-            });
-        });
-    </script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <!-- JavaScript (ES Module) -->
+    <script type="module" src="scripts/suggest.js"></script>
 </head>
 
 <body>

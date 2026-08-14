@@ -4,11 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popcorn Flicks | Thank You</title>
+    <title>Popcorn Flicks | Thank you</title>
+    <meta name="description" content="This page is to thank you for suggesting a movie to be added to Popcorn Flicks.">
+    <meta name="author" content="Tamara Moya">
+
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="Popcorn Flicks | Movie Recommendations">
+    <meta property="og:description" content="Find the perfect movie for your current mood. No endless scrolling.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://placehold.co/1200x630/E50914/FFFFFF?text=Popcorn+Flicks">
+    <meta property="og:url" content="https://yourgithubusername.github.io/wdd231/final/index.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <!-- JavaScript (ES Module) -->
+    <script type="module" src="scripts/form-response.js"></script>
 </head>
 
 <body>
@@ -18,29 +40,16 @@
         </div>
     </header>
 
-    <main
-        style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 50vh; text-align: center; padding: 20px;">
-        <h1 style="color: var(--accent-red); margin-bottom: 20px;">THANK YOU!</h1>
-        <p style="font-size: 1.2rem; margin-bottom: 10px;">Your movie suggestion was submitted successfully.</p>
+    <main <h1>THANK YOU!</h1>
+        <p>Your movie suggestion was submitted successfully.</p>
 
-        <!-- Recuadro para mostrar los datos enviados (DOM Manipulation) -->
-        <div id="results"
-            style="background-color: var(--bg-surface); padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid var(--border-color); width: 100%; max-width: 400px; text-align: left;">
-            <p><strong>Title:</strong> <span id="res-title"></span></p>
+        <div id="results" <p><strong>Title:</strong> <span id="res-title"></span></p>
             <p><strong>Runtime:</strong> <span id="res-runtime"></span> min</p>
             <p><strong>Mood:</strong> <span id="res-mood"></span></p>
         </div>
 
-        <a href="index.html" class="filter-btn active" style="text-decoration: none; margin-top: 20px;">Back to Home</a>
+        <a href="index.html" class="filter-btn active">Back to Home</a>
     </main>
-
-    <script>
-        // Leer la URL para mostrar los datos enviados (demostrando manipulación del DOM)
-        const urlParams = new URLSearchParams(window.location.search);
-        document.getElementById('res-title').textContent = urlParams.get('title') || 'N/A';
-        document.getElementById('res-runtime').textContent = urlParams.get('runtime') || 'N/A';
-        document.getElementById('res-mood').textContent = urlParams.get('mood') || 'N/A';
-    </script>
 </body>
 
 </html>

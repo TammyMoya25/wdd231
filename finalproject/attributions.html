@@ -5,42 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Popcorn Flicks | Attributions</title>
+
+    <!-- SEO and Metadata -->
+    <meta name="description"
+        content="This webiste is to thank and give credit to the resources that helped me build this website.">
+    <meta name="author" content="Tamara Moya">
+
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="Popcorn Flicks | Movie Recommendations">
+    <meta property="og:description" content="Find the perfect movie for your current mood. No endless scrolling.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://placehold.co/1200x630/E50914/FFFFFF?text=Popcorn+Flicks">
+    <meta property="og:url" content="https://yourgithubusername.github.io/wdd231/final/index.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/normalize.css">
 </head>
 
-<body>
+<body class="attributions-page">
     <header>
         <div class="logo">
             <h2>🍿 Popcorn Flicks</h2>
         </div>
     </header>
 
-    <main style="max-width: 800px; margin: 40px auto; padding: 20px;">
-        <h1 style="color: var(--accent-red); margin-bottom: 20px;">Source Attributions</h1>
-        <p style="margin-bottom: 15px;">The following resources were used to build and populate the Popcorn Flicks web
-            application:</p>
+    <main class="attributions-main">
+        <h1>Source Attributions</h1>
+        <p>The following resources were used to build and populate the Popcorn Flicks web application:</p>
 
-        <ul style="line-height: 1.8; margin-left: 20px; color: var(--text-muted);">
-            <li><strong>Images and Posters:</strong> Photos and background imagery sourced from <a
-                    href="https://unsplash.com/" target="_blank" style="color: var(--accent-gold);">Unsplash</a> under
-                the Unsplash License.</li>
+        <ul>
+            <li><strong>Movie Posters & Information:</strong> Official movie titles, descriptions, and promotional
+                poster images from <strong>TMDB</strong>.</li>
             <li><strong>Fonts:</strong> Typography provided by <a href="https://fonts.google.com/" target="_blank"
-                    style="color: var(--accent-gold);">Google Fonts</a> (Montserrat and Open Sans).</li>
+                    rel="noopener">Google Fonts</a> (Montserrat and Open Sans).</li>
             <li><strong>Icons & Code Structure:</strong> Built following the guidelines and educational framework of
                 BYU-Idaho WDD 231 course.</li>
         </ul>
 
-        <div style="margin-top: 40px;">
-            <a href="index.html" class="filter-btn active" style="text-decoration: none;">Back to Home</a>
+        <div class="attr-btn-container">
+            <a href="index.html" class="filter-btn active">Back to Home</a>
         </div>
     </main>
 
-    <footer
-        style="text-align: center; padding: 20px; background-color: var(--bg-surface); border-top: 1px solid var(--border-color); margin-top: auto;">
-        <p>&copy; 2026 Popcorn Flicks | Tamara Moya</p>
+    <footer>
+        <p>&copy; <span id="current-year">2026</span> Popcorn Flicks | Tamara Moya</p>
     </footer>
 </body>
 
