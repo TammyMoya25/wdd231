@@ -26,11 +26,11 @@
         rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
 
     <!-- JavaScript (ES Module) -->
-    <script type="module" src="scripts/form-response.js"></script>
+    <script type="module" src="scripts/form-response.js" defer></script>
 </head>
 
 <body>
@@ -40,16 +40,24 @@
         </div>
     </header>
 
-    <main <h1>THANK YOU!</h1>
-        <p>Your movie suggestion was submitted successfully.</p>
+    <main class="form-response-main">
+        <section class="response-card">
+            <h1>THANK YOU!</h1>
+            <p class="success-subtitle">Your movie suggestion was submitted successfully.</p>
 
-        <div id="results" <p><strong>Title:</strong> <span id="res-title"></span></p>
-            <p><strong>Runtime:</strong> <span id="res-runtime"></span> min</p>
-            <p><strong>Mood:</strong> <span id="res-mood"></span></p>
-        </div>
+            <div id="results" class="results-container">
+                <p><strong>Title:</strong> <span id="res-title"></span></p>
+                <p><strong>Runtime:</strong> <span id="res-runtime"></span> min</p>
+                <p><strong>Mood:</strong> <span id="res-mood"></span></p>
+            </div>
 
-        <a href="index.html" class="filter-btn active">Back to Home</a>
+            <div class="attr-btn-container">
+                <a href="index.html" class="filter-btn active">Back to Home</a>
+            </div>
+        </section>
     </main>
 </body>
+
+</html>
 
 </html>
